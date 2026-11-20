@@ -1,0 +1,82 @@
+{
+  "hidden_size": 128,
+  "learning_rate": 0.08,
+  "epochs": 15,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.2933,
+      "accuracy": 0.917
+    },
+    {
+      "epoch": 2,
+      "loss": 0.2403,
+      "accuracy": 0.9326
+    },
+    {
+      "epoch": 3,
+      "loss": 0.2058,
+      "accuracy": 0.9395
+    },
+    {
+      "epoch": 4,
+      "loss": 0.1838,
+      "accuracy": 0.9466
+    },
+    {
+      "epoch": 5,
+      "loss": 0.1622,
+      "accuracy": 0.953
+    },
+    {
+      "epoch": 6,
+      "loss": 0.1504,
+      "accuracy": 0.9559
+    },
+    {
+      "epoch": 7,
+      "loss": 0.1361,
+      "accuracy": 0.9607
+    },
+    {
+      "epoch": 8,
+      "loss": 0.1289,
+      "accuracy": 0.9631
+    },
+    {
+      "epoch": 9,
+      "loss": 0.1223,
+      "accuracy": 0.9661
+    },
+    {
+      "epoch": 10,
+      "loss": 0.116,
+      "accuracy": 0.9659
+    },
+    {
+      "epoch": 11,
+      "loss": 0.1103,
+      "accuracy": 0.9683
+    },
+    {
+      "epoch": 12,
+      "loss": 0.1051,
+      "accuracy": 0.9686
+    },
+    {
+      "epoch": 13,
+      "loss": 0.1014,
+      "accuracy": 0.9706
+    },
+    {
+      "epoch": 14,
+      "loss": 0.0958,
+      "accuracy": 0.9721
+    },
+    {
+      "epoch": 15,
+      "loss": 0.0952,
+      "accuracy": 0.9721
+    }
+  ]
+}

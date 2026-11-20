@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MNIST / NumPy</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main>
+    <header><h1>MNIST / NumPy</h1><p>Manual forward propagation and backpropagation. No pretrained model.</p></header>
+    <section class="workspace">
+      <article class="panel draw-panel">
+        <h2>1. Draw</h2>
+        <canvas id="drawing-canvas" width="280" height="280" aria-label="Drawing area for a handwritten digit"></canvas>
+        <div class="button-row"><button id="predict-button">Predict</button><button id="clear-button">Clear</button></div>
+        <p id="prediction" class="result">Draw one digit.</p>
+        <div id="scores" class="scores"></div>
+      </article>
+      <article class="panel controls-panel">
+        <h2>2. Train a new model</h2>
+        <p>Uses 12,000 real MNIST images. Weight colours update during actual gradient descent.</p>
+        <label>Learning rate <input id="learning-rate" type="number" min="0.001" max="1" step="0.001" value="0.08"></label>
+        <label>Epochs <input id="epochs" type="number" min="1" max="30" step="1" value="3"></label>
+        <label>Hidden neurons <input id="hidden-size" type="number" min="16" max="512" step="8" value="16"></label>
+        <button id="train-button">Train</button>
+        <p id="training-message" class="status">Ready.</p>
+        <div id="history" class="history"></div>
+      </article>
+    </section>
+    <section class="panel network-panel">
+      <div class="network-heading"><div><h2>3. Learned network</h2><p id="network-description">Loading active model weights…</p></div><div class="legend"><span class="positive">Positive weight</span><span class="negative">Negative weight</span><span class="activation">Activation</span></div></div>
+      <div id="network-view" aria-live="polite"></div>
+      <p class="network-note">Input is grouped into 16 spatial MNIST regions. Lines are real learned weights, coloured by sign and strength. For hidden layers of 24 or fewer, every hidden neuron is shown; larger layers use the calculated input-to-output influence map.</p>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
